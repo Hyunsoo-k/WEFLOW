@@ -19,10 +19,19 @@ body {
 body {
   position: relative;
   min-height: 100%;
+  padding-top: $header-height-mobile;
   font-family: $font-family-base;
   color: $text-color-base;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  @include tablet {
+    padding-top: $header-height-tablet;
+  }
+
+  @include desktop {
+    padding-top: $header-height-desktop;
+  }
 }
 
 ul {
