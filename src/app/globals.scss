@@ -1,3 +1,5 @@
+@use '@/styles/variables' as *;
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -16,6 +18,8 @@ body {
 
 body {
   min-height: 100%;
+  font-family: $font-family-base;
+  color: $text-color-base;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
