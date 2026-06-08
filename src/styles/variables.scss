@@ -1,0 +1,88 @@
+// break-point
+$breakpoint-mobile: 48rem;
+$breakpoint-tablet: 64rem;
+$breakpoint-desktop: 75rem;
+
+// media-query
+@mixin tablet {
+  @media (min-width: #{$breakpoint-mobile}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$breakpoint-tablet}) {
+    @content;
+  }
+}
+
+@mixin wide {
+  @media (min-width: #{$breakpoint-desktop}) {
+    @content;
+  }
+}
+
+// z-index
+$header-zidnex: 20;
+$drawer-zindex: 30;
+$backdrop-zindex: 10;
+$modal-zindex: 30;
+
+// max-width
+$max-width: 80rem;
+
+// height
+$header-height-mobile: 4rem;
+$header-height-tablet: 4.5rem;
+$header-height-desktop: 4.5rem;
+
+// main-min-height
+$main-min-height-mobile: calc(100dvh - #{$header-height-mobile});
+$main-min-height-tablet: calc(100dvh - #{$header-height-tablet});
+$main-min-height-desktop: calc(100dvh - #{$header-height-desktop});
+
+// screen-padding
+$screen-padding-mobile: 1rem;
+$screen-padding-tablet: 1.5rem;
+$screen-padding-desktop: 2rem;
+
+// screen-padding-mixin
+@mixin screen-padding {
+  padding-left: $screen-padding-mobile;
+  padding-right: $screen-padding-mobile;
+
+  @include tablet {
+    padding-left: $screen-padding-tablet;
+    padding-right: $screen-padding-tablet;
+  }
+
+  @include desktop {
+    padding-left: $screen-padding-desktop;
+    padding-right: $screen-padding-desktop;
+  }
+}
+
+// content-padding
+$content-padding-mobile: 0.8rem;
+$content-padding-tabelt: 1rem;
+$content-padding-desktop: 1.2rem;
+
+// border
+$border-base: #D4C9BB;
+$radius: 10px;
+
+// background-color
+$bg-base: #FFFFFF;
+$bg-secondary: #E8F0FF;
+$bg-active: #3562E9;
+$bg-active-secondary: #163db4;
+$bg-skeleton: #D1D1D1;
+
+// font-family
+$font-family-base: var(--font-pretendard), -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+
+// font-color
+$text-color-base: #2C2C2C;
+$text-color-secondary: #7A7268;
+$text-color-inverse: #FFFFFF;
+$text-color-active: #3562E9;
