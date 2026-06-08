@@ -1,0 +1,38 @@
+@use '@/styles/variables' as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  z-index: $header-zidnex;
+  display: flex;
+  align-items: center;
+  width: 100dvw;
+  height: $header-height-mobile;
+  border-bottom: 1px solid $border-base;
+  @include screen-padding;
+
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .banner {
+
+      .bannerLink {
+        display: flex;
+        align-items: center;
+
+        .bannerText {
+          font-size: 1.2rem;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .burgerIcon {
+      font-size: 1.6rem;
+      color: $text-color-base;
+    }
+  }
+}
