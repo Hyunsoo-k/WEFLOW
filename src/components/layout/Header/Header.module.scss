@@ -9,6 +9,7 @@
   width: 100dvw;
   height: $header-height-mobile;
   border-bottom: 1px solid $border-base;
+  background-color: $bg-base;
   @include screen-padding;
 
   @include tablet {
