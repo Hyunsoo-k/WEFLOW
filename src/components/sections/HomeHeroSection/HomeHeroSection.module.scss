@@ -33,7 +33,7 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    color: $text-color-inverse;
+    color: $text-inverse;
     @include screen-padding;
 
     @include tablet {
@@ -59,7 +59,7 @@
       }
 
       .strong {
-        color: $text-color-active;
+        color: $text-active;
       }
     }
 
@@ -101,7 +101,7 @@
 
           .title {
             font-size: 1rem;
-            color: $text-color-active;
+            color: $text-active;
           }
 
           .description {

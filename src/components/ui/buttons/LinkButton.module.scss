@@ -6,7 +6,7 @@
   border-radius: 9999px;
   background-color: $bg-base;
   font-size: 0.9rem;
-  color: $text-color-base;
+  color: $text-base;
   text-align: center;
   transition: background-color 0.2s ease;
 
@@ -16,13 +16,13 @@
 
   &:hover {
     border: 1px solid $bg-active;
-    color: $text-color-active;
+    color: $text-active;
   }
 
   &.active {
     border: none;
     background-color: $bg-active;
-    color: $text-color-inverse;
+    color: $text-inverse;
 
     &:hover {
       background-color: $bg-active-secondary;

@@ -40,7 +40,7 @@
 
     .burgerIcon {
       font-size: 1.6rem;
-      color: $text-color-base;
+      color: $text-base;
 
       @include tablet {
         display: none;
