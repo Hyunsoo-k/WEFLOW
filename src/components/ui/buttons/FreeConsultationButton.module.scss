@@ -1,0 +1,15 @@
+@use '@/styles/variables' as *;
+
+.freeConsultationButton {
+  margin-top: auto;
+  padding: 0.8rem 1.2rem;
+  border-radius: 9999px;
+  background-color: $bg-active;
+  color: $text-color-inverse;
+  text-align: center;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: $bg-active-secondary;
+  }
+}
