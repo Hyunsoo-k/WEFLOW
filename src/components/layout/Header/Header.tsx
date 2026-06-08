@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { CiMenuBurger } from "react-icons/ci";
 
 import { useDrawerStore } from '@/stores/useDrawerStore';
+import { Nav } from './components/Nav/Nav';
 import { Drawer } from './components/Drawer/Drawer';
 
 import styles from './Header.module.scss';
@@ -29,6 +30,7 @@ export const Header = () => {
             </Link>
           </h1>
           <CiMenuBurger onClick={drawerOpen} className={styles.burgerIcon} />
+          <Nav />
         </div>
       </header>
       <Drawer />

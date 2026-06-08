@@ -26,6 +26,10 @@
         .bannerText {
           font-size: 1.2rem;
           font-weight: 600;
+
+          @include tablet {
+            font-size: 1.4rem;
+          }
         }
       }
     }
@@ -33,6 +37,10 @@
     .burgerIcon {
       font-size: 1.6rem;
       color: $text-color-base;
+
+      @include tablet {
+        display: none;
+      }
     }
   }
 }
