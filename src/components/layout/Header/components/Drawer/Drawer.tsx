@@ -5,6 +5,7 @@ import { RxCross2 } from 'react-icons/rx';
 
 import { NAV_ITEMS } from '@/consts/navItems';
 import { useDrawerStore } from '@/stores/useDrawerStore';
+import { FreeConsultationButton } from '@/components/ui/buttons/FreeConsultationButton';
 
 import styles from './Drawer.module.scss';
 
@@ -27,6 +28,7 @@ export const Drawer = () => {
               </Link>
             </li>
           ))}
+          <FreeConsultationButton />
         </ul>
       </div>
     </nav>
