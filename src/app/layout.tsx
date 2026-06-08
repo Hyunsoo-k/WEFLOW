@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import { Noto_Sans_KR } from 'next/font/google';
-import "./globals.css";
+import "./globals.scss";
 
 export const metadata: Metadata = {
   title: "WEFLOW — 문의로 이어지는 홈페이지를 만듭니다.",
