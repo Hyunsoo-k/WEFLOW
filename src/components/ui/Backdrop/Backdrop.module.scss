@@ -1,0 +1,14 @@
+@use '@/styles/variables' as *;
+
+.backdrop {
+  position: fixed;
+  z-index: $backdrop-zindex;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+  
+  @include tablet {
+    display: none;
+  }
+}
