@@ -11,6 +11,10 @@
   border-bottom: 1px solid $border-base;
   @include screen-padding;
 
+  @include tablet {
+    height: $header-height-tablet;
+  }
+
   .inner {
     display: flex;
     justify-content: space-between;
