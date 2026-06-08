@@ -9,7 +9,12 @@
   width: 100dvw;
   height: $header-height-mobile;
   border-bottom: 1px solid $border-base;
+  background-color: $bg-base;
   @include screen-padding;
+
+  @include tablet {
+    height: $header-height-tablet;
+  }
 
   .inner {
     display: flex;
@@ -36,7 +41,7 @@
 
     .burgerIcon {
       font-size: 1.6rem;
-      color: $text-color-base;
+      color: $text-base;
 
       @include tablet {
         display: none;
