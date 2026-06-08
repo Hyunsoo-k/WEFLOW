@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 import { NAV_ITEMS } from '@/consts/navItems';
-import { FreeConsultationButton } from '@/components/ui/buttons/FreeConsultationButton';
+import { LinkButton } from '@/components/ui/buttons/LinkButton';
 
 import styles from './Nav.module.scss';
 
@@ -16,7 +16,7 @@ export const Nav = () => {
             </Link>
           </li>
         ))}
-        <FreeConsultationButton />
+        <LinkButton isActive={true} text='무료진단 받기' url='/contact' />
       </ul>
     </nav>
   );

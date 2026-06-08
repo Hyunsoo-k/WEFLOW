@@ -5,7 +5,7 @@ import { RxCross2 } from 'react-icons/rx';
 
 import { NAV_ITEMS } from '@/consts/navItems';
 import { useDrawerStore } from '@/stores/useDrawerStore';
-import { FreeConsultationButton } from '@/components/ui/buttons/FreeConsultationButton';
+import { LinkButton } from '@/components/ui/buttons/LinkButton';
 
 import styles from './Drawer.module.scss';
 
@@ -28,7 +28,9 @@ export const Drawer = () => {
               </Link>
             </li>
           ))}
-          <FreeConsultationButton />
+          <li className={styles.item}>
+            <LinkButton isActive={true} text='무료진단 받기' url='/contact' />  
+          </li>
         </ul>
       </div>
     </nav>
