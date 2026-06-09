@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { Header } from '@/components/layout/Header/Header';
+import { Footer } from '@/components/layout/Footer/Footer';
 import { Backdrop } from '@/components/ui/Backdrop/Backdrop';
 
 import localFont from 'next/font/local';
@@ -27,6 +28,7 @@ export default function RootLayout({
       <body className={pretendard.variable}>
         <Header />
         {children}
+        <Footer />
         <Backdrop />
       </body>
     </html>
