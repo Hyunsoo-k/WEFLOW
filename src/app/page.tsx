@@ -1,5 +1,6 @@
 import { HomeHeroSection } from '@/components/sections/HomeHeroSection/HomeHeroSection';
 import { HomeCarePlanSection } from '@/components/sections/HomeCarePlanSection/HomeCarePlanSection';
+import { HomeCasesSection } from '@/components/sections/HomeCasesSection/HomeCasesSection';
 
 import styles from "./page.module.scss";
 
@@ -9,6 +10,7 @@ export default function Home() {
       <main className={styles.main}>
         <HomeHeroSection />
         <HomeCarePlanSection />
+        <HomeCasesSection />
       </main>
     </div>
   );
