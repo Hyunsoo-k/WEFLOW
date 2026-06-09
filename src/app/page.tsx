@@ -2,6 +2,7 @@ import { HomeHeroSection } from '@/components/sections/HomeHeroSection/HomeHeroS
 import { HomeCarePlanSection } from '@/components/sections/HomeCarePlanSection/HomeCarePlanSection';
 import { HomeCasesSection } from '@/components/sections/HomeCasesSection/HomeCasesSection';
 import { HomeProcessSection } from '@/components/sections/HomeProcessSection/HomeProcessSection';
+import { HomeReviewsSection } from '@/components/sections/HomeReviewsSection/HomeReviewsSection';
 
 import styles from "./page.module.scss";
 
@@ -13,6 +14,7 @@ export default function Home() {
         <HomeCarePlanSection />
         <HomeCasesSection />
         <HomeProcessSection />
+        <HomeReviewsSection />
       </main>
     </div>
   );

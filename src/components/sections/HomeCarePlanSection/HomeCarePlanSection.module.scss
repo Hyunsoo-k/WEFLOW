@@ -8,6 +8,20 @@
   }
 
   .header {
+    .eyebrow {
+      display: block;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      color: $text-active;
+      text-align: center;
+      letter-spacing: 1px;
+
+      @include tablet {
+        margin-bottom: 2rem;
+        font-size: 1.2rem;
+      }
+    }
+
     .title {
       margin-bottom: 2rem;
       text-align: center;
