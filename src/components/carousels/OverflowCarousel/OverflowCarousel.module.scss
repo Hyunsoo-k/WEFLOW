@@ -1,0 +1,49 @@
+@use '@/styles/variables' as *;
+
+.overflowCarousel {
+  position: relative;
+  margin-top: 2rem;
+
+  @include tablet {
+    margin-top: 4rem;
+  }
+
+  .trackWrapper {
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    cursor: grab;
+    scroll-behavior: smooth;
+    @include screen-padding;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .track {
+      display: flex;
+      gap: 1rem;
+
+      @include desktop {
+        max-width: $max-width;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .item {
+        &:last-child {
+          padding-right: 1rem;
+
+          @include tablet {
+            padding-right: 1.5rem;
+          }
+
+          @include desktop {
+            padding-right: 2rem;
+          }
+        }
+      }
+    }
+  }
+}

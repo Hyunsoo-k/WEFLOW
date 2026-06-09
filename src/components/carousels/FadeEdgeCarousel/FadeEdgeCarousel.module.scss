@@ -1,0 +1,62 @@
+@use '@/styles/variables' as *;
+
+.fadeEdgeCarousel {
+  margin-top: 2rem;
+  width: 100%;
+  overflow: hidden;
+
+  @include tablet {
+    margin-top: 4rem;
+  }
+
+  .trackWrapper {
+    overflow-x: hidden;
+    position: relative;
+    max-width: $max-width;
+    margin: 0 auto;
+    user-select: none;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 8%;
+      z-index: 2;
+      pointer-events: none;
+      backdrop-filter: blur(6px); 
+      -webkit-backdrop-filter: blur(6px);
+    }
+
+    &::before {
+      left: 0;
+      background: linear-gradient(to right, $bg-base 30%, rgba($bg-base, 0) 100%);
+    }
+
+    &::after {
+      right: 0;
+      background: linear-gradient(to left, $bg-base 30%, rgba($bg-base, 0) 100%);
+    }
+
+    .track {
+      display: flex;
+      gap: 1rem;
+      width: max-content;
+      animation: marquee linear infinite;
+
+      .item {
+        flex-shrink: 0;
+      }
+    }
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

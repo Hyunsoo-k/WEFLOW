@@ -29,7 +29,7 @@ $backdrop-zindex: 10;
 $modal-zindex: 30;
 
 // max-width
-$max-width: 80rem;
+$max-width: 88rem;
 
 // height
 $header-height-mobile: 4rem;
@@ -68,7 +68,7 @@ $content-padding-tabelt: 1rem;
 $content-padding-desktop: 1.2rem;
 
 // border
-$border-base: #D4C9BB;
+$border-base: #e4e0db;
 $radius: 10px;
 
 // background-color
@@ -82,7 +82,7 @@ $bg-skeleton: #D1D1D1;
 $font-family-base: var(--font-pretendard), -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
 
 // font-color
-$text-color-base: #2C2C2C;
-$text-color-secondary: #7A7268;
-$text-color-inverse: #FFFFFF;
-$text-color-active: #3562E9;
+$text-base: #2C2C2C;
+$text-secondary: #7A7268;
+$text-inverse: #FFFFFF;
+$text-active: #3562E9;
