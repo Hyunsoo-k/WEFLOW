@@ -89,10 +89,12 @@ export const HomeCarePlanSection = () => {
 
   return (
     <section className={styles.homeCarePlanSection}>
-      <h2 className={styles.title}>
-        <strong className={styles.strong}>WEFLOW</strong> 만의 케어 플랜 혜택
-      </h2>
-      <div className={styles.listWrapper}>
+      <header className={styles.header}>
+        <h2 className={styles.title}>
+          <strong className={styles.strong}>WEFLOW</strong> 만의 케어 플랜 혜택
+        </h2>
+      </header>
+      <div className={styles.body}>
         <ul 
           ref={listRef} 
           className={`${styles.list} ${!isScrollable ? styles.center : ''} ${isDown ? styles.active : ''}`} 
