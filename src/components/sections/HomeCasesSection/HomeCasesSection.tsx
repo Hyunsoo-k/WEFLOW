@@ -11,6 +11,7 @@ export const HomeCasesSection = () => {
   return (
     <section className={styles.homeCasesSection}>
       <header className={styles.header}>
+        <span className={styles.eyebrow}>OUR CASES</span>
         <h2 className={styles.title}>
           다양한 업종의 <br className={styles.br} />
           <strong className={styles.strong}>성공 사례</strong>를 확인하세요.

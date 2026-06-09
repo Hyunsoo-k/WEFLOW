@@ -1,11 +1,11 @@
 @use '@/styles/variables' as *;
 
 .homeCasesSection {
-  padding: 5rem 0;
+  padding: 4rem 0;
   background-color: $bg-secondary;
 
   @include tablet {
-    padding: 8rem 0;
+    padding: 6rem 0;
   }
 
   .header {
@@ -14,6 +14,20 @@
 
     @include tablet {
       margin-bottom: 4rem;
+    }
+
+    .eyebrow {
+      display: block;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      color: $text-active;
+      text-align: center;
+      letter-spacing: 1px;
+
+      @include tablet {
+        margin-bottom: 2rem;
+        font-size: 1.2rem;
+      }
     }
 
     .title {

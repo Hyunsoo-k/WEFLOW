@@ -7,6 +7,7 @@ export const HomeProcessSection = () => {
   return (
     <section className={styles.homeProcessSection}>
       <header className={styles.header}>
+        <span className={styles.eyebrow}>OUR PROCESS</span>
         <h2 className={styles.title}>
           <strong className={styles.strong}>WEFLOW</strong> 만의 제작 프로세스
         </h2>

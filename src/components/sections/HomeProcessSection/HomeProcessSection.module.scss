@@ -1,13 +1,27 @@
 @use '@/styles/variables' as *;
 
 .homeProcessSection {
-  padding: 5rem 0;
+  padding: 4rem 0;
 
   @include tablet {
-    padding: 8rem 0;
+    padding: 6rem 0;
   }
 
   .header {
+    .eyebrow {
+      display: block;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      color: $text-active;
+      text-align: center;
+      letter-spacing: 1px;
+
+      @include tablet {
+        margin-bottom: 2rem;
+        font-size: 1.2rem;
+      }
+    }
+
     .title {
       margin-bottom: 2rem;
       text-align: center;

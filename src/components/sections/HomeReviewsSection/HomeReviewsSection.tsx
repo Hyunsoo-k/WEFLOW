@@ -24,7 +24,7 @@ export const HomeReviewsSection = () => {
   return (
     <section className={styles.homeReviewsSection}>
       <header className={styles.header}>
-        <span className={styles.eyeBrow}>REVIEWS</span>
+        <span className={styles.eyebrow}>REVIEWS</span>
         <h2 className={styles.title}>
           <strong className={styles.strong}>맡겨본 분</strong>들의 이야기
         </h2>

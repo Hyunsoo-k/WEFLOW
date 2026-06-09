@@ -90,6 +90,7 @@ export const HomeCarePlanSection = () => {
   return (
     <section className={styles.homeCarePlanSection}>
       <header className={styles.header}>
+        <span className={styles.eyebrow}>CARE PLAN</span>
         <h2 className={styles.title}>
           <strong className={styles.strong}>WEFLOW</strong> 만의 케어 플랜 혜택
         </h2>
