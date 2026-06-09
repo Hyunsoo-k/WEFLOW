@@ -7,6 +7,7 @@ import { CiMenuBurger } from "react-icons/ci";
 import { useDrawerStore } from '@/stores/useDrawerStore';
 import { Nav } from './components/Nav/Nav';
 import { Drawer } from './components/Drawer/Drawer';
+import { LinkButton } from '@/components/ui/buttons/LinkButton';
 
 import styles from './Header.module.scss';
 
@@ -31,6 +32,9 @@ export const Header = () => {
           </h1>
           <CiMenuBurger onClick={drawerOpen} className={styles.burgerIcon} />
           <Nav />
+          <div className={styles.linkBtnWrapper}>
+            <LinkButton isActive={true} text='무료진단 받기' url='/contact' />
+          </div>
         </div>
       </header>
       <Drawer />
