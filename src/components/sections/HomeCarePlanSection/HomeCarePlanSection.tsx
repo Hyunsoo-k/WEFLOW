@@ -94,6 +94,9 @@ export const HomeCarePlanSection = () => {
         <h2 className={styles.title}>
           <strong className={styles.strong}>WEFLOW</strong> 만의 케어 플랜 혜택
         </h2>
+        <span className={styles.description}>
+          고객만을 위한 차별화된 케어를 확인해 보세요.
+        </span>
       </header>
       <div className={styles.body}>
         <ul 

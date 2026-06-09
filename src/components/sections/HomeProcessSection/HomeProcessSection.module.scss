@@ -8,6 +8,13 @@
   }
 
   .header {
+    margin-bottom: 3rem;
+    text-align: center;
+
+    @include tablet {
+      margin-bottom: 4rem;
+    }
+
     .eyebrow {
       display: block;
       margin-bottom: 1rem;
@@ -23,16 +30,33 @@
     }
 
     .title {
-      margin-bottom: 2rem;
-      text-align: center;
+      margin-bottom: 1rem;
 
       @include tablet {
-        margin-bottom: 4rem;
+        margin-bottom: 1.5rem;
         font-size: 2rem;
+      }
+
+      .br {
+        @include tablet {
+          display: none;
+        }
       }
 
       .strong {
         color: $text-active;
+      }
+    }
+
+    .description {
+      display: block;
+      font-size: 0.9rem;
+      color: $text-secondary;
+      text-align: center;
+      @include screen-padding;
+
+      @include tablet {
+        font-size: 1rem;
       }
     }
   }

@@ -54,6 +54,7 @@
       font-size: 0.9rem;
       color: $text-secondary;
       text-align: center;
+      @include screen-padding;
 
       @include tablet {
         font-size: 1rem;
@@ -61,9 +62,6 @@
     }
   }
 
-  // ------------------------------------------
-  // # body
-  // ------------------------------------------
   .body {
     .listWrapper {
       overflow-x: scroll;
