@@ -1,7 +1,7 @@
 @use '@/styles/variables' as *;
 
 .homeProcessSection {
-  padding: 5rem 0 3rem;
+  padding: 5rem 0;
 
   @include tablet {
     padding: 8rem 0;
