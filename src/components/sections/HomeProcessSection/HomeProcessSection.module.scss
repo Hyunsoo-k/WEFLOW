@@ -1,0 +1,46 @@
+@use '@/styles/variables' as *;
+
+.homeProcessSection {
+  padding: 5rem 0 3rem;
+
+  @include tablet {
+    padding: 8rem 0;
+  }
+
+  .header {
+    .title {
+      margin-bottom: 2rem;
+      text-align: center;
+
+      @include tablet {
+        margin-bottom: 4rem;
+        font-size: 2rem;
+      }
+
+      .strong {
+        color: $text-active;
+      }
+    }
+  }
+
+  .body {
+    @include screen-padding;
+    
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      @include tablet {
+        display: grid;
+        grid-template: auto auto / auto auto auto;
+      }
+
+      @include desktop {
+        gap: 1.5rem;
+        max-width: $max-width;
+        margin: 0 auto;
+      }
+    }
+  }
+}
