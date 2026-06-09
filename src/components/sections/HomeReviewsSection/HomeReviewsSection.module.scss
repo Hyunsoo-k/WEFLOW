@@ -1,0 +1,56 @@
+@use '@/styles/variables' as *;
+
+.homeReviewsSection {
+  padding: 5rem 0 3rem;
+  background-color: $bg-secondary;
+
+  @include tablet {
+    padding: 7rem 0;
+  }
+
+  .header {
+    .eyeBrow {
+      display: block;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      color: $text-active;
+      text-align: center;
+      letter-spacing: 1px;
+
+      @include tablet {
+        margin-bottom: 2rem;
+        font-size: 1.2rem;
+      }
+    }
+
+    .title {
+      margin-bottom: 2rem;
+      text-align: center;
+
+      @include tablet {
+        margin-bottom: 4rem;
+        font-size: 2rem;
+      }
+
+      .strong {
+        color: $text-active;
+      }
+    }
+
+    .tagList {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem 0.5rem;
+      min-height: max-content;
+
+      @include tablet {
+        gap: 1rem;
+      }
+
+      .item {
+        flex-shrink: 0;
+      }
+    }
+  }
+}
