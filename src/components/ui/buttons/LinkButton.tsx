@@ -6,13 +6,14 @@ type Props = {
   isActive: boolean;
   text: string;
   url: string;
+  isFullWidth?: boolean;
 };
 
-export const LinkButton = ({ isActive, text, url }: Props) => {
+export const LinkButton = ({ isActive, text, url, isFullWidth }: Props) => {
   return (
     <Link
       href={url}
-      className={`${styles.linkButton} ${isActive ? styles.active : ''}`}
+      className={`${styles.linkButton} ${isActive ? styles.active : ''} ${isFullWidth ? styles.fullWidth : ''}`}
     >
       {text}
     </Link>

@@ -1,8 +1,8 @@
 @use '@/styles/variables' as *;
 
-.homeCasesSection {
+.homePricingSection {
   padding: 4rem 0;
-  background-color: $bg-secondary;
+  background-color: $bg-base;
 
   @include tablet {
     padding: 6rem 0;
@@ -54,7 +54,6 @@
       font-size: 0.9rem;
       color: $text-secondary;
       text-align: center;
-      @include screen-padding;
 
       @include tablet {
         font-size: 1rem;
@@ -63,27 +62,22 @@
   }
 
   .body {
-    .listWrapper {
-      overflow-x: scroll;
-      -ms-overflow-style: none;
-      user-select: none;
-      -webkit-user-drag: none;
-      cursor: grab;
-      @include screen-padding;
+    @include screen-padding;
+    
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
 
-      &::-webkit-scrollbar {
-        display: none;
+      @include desktop {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: $max-width;
+        margin: 0 auto;
       }
-      
-      .list {
-        display: flex;
-        gap: 1rem;
-        margin-top: 2rem;
-        @include screen-padding;
 
-        @include tablet {
-          margin-top: 4rem;
-        }
+      .item {
+        width: 100%;
       }
     }
   }

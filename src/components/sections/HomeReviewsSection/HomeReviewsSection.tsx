@@ -28,6 +28,9 @@ export const HomeReviewsSection = () => {
         <h2 className={styles.title}>
           <strong className={styles.strong}>맡겨본 분</strong>들의 이야기
         </h2>
+        <span className={styles.description}>
+          WEFLOW와 함께한 사례들을 확인해 보세요.
+        </span>
         <ul className={styles.tagList}>
           {TAGS.map((item: TagType) => (
             <li key={item} className={styles.item}>
