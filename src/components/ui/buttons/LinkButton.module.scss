@@ -1,6 +1,7 @@
 @use '@/styles/variables' as *;
 
 .linkButton {
+  display: block;
   padding: 0.8rem 1.2rem;
   border: 1px solid $border-base;
   border-radius: 9999px;
@@ -27,5 +28,9 @@
     &:hover {
       background-color: $bg-active-secondary;
     }
+  }
+
+  &.fullWidth {
+    width: 100%;
   }
 }

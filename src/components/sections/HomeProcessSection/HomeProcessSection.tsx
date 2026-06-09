@@ -11,6 +11,9 @@ export const HomeProcessSection = () => {
         <h2 className={styles.title}>
           <strong className={styles.strong}>WEFLOW</strong> 만의 제작 프로세스
         </h2>
+        <span className={styles.description}>
+          WEFLOW만의 체계적이고 신속한 프로세스를 확인해 보세요.
+        </span>
       </header>
       <div className={styles.body}>
         <ul className={styles.list}>
