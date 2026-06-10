@@ -4,6 +4,7 @@ import { useRef } from 'react';
 
 import type { CaseItem } from '@/type/caseItem';
 import { CaseCard } from '@/shared/card/CaseCard/CaseCard';
+import { CarouselControls } from './components/CarouselControls/CarouselControls';
 
 import styles from './OverflowCarousel.module.scss';
 
@@ -31,6 +32,11 @@ export const OverflowCarousel = ({ items }: Props) => {
           ))}
         </ul>
       </div>
+      <CarouselControls
+        trackWrapperRef={trackWrapperRef}
+        trackRef={trackRef}
+        itemRef={itemRef}
+      />
     </div>
   );
 };

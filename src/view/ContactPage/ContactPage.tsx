@@ -9,7 +9,7 @@ export default function ContactPage() {
     <main className={styles.page}>
       <HeaderSection
         eyebrow='FREE DIAGNOSIS'
-        title='무료 진단 신청'
+        title='무료 문의 신청'
         description='가진 자료만 보내주시면 무엇을 만들 수 있는지, 무엇을 더 준비하면 좋은지 30분 안에 정리해드려요.'
       />
       <BodySection

@@ -71,7 +71,7 @@ export const PricingCard = ({ planType, item }: Props) => {
         <LinkButton
           isActive={item.tier === 'PRO'}
           text='견적 보기'
-          url='/'
+          url='/pricing'
           isFullWidth={true}
         />
       </footer>
