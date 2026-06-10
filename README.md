@@ -1,3 +1,5 @@
+<img width="400" height="196" alt="화면 녹화 중 2026-06-11 080746" src="https://github.com/user-attachments/assets/62568172-33d3-4a37-a66d-67aec4de19d9" />
+
 ## WEFLOW WEB
 WEFLOW사의 면접 과제물
 
