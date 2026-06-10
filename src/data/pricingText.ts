@@ -1,4 +1,4 @@
-import type { AdPlans, CarePalns, ProductionPlans } from '@/types/pricing';
+import type { AdPlans, CarePalns, ProductionPlans } from '@/type/pricing';
 
 export const PRODUCTION_PLANS: ProductionPlans = {
   type: 'produce',

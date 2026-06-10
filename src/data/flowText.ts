@@ -1,4 +1,4 @@
-import type { FlowItem } from '@/types/flowItem';
+import type { FlowItem } from '@/type/flowItem';
 
 export const FLOW_TEXT: FlowItem[] = [
   {

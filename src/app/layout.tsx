@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
-import { Header } from '@/components/layout/Header/Header';
-import { Footer } from '@/components/layout/Footer/Footer';
-import { Backdrop } from '@/components/ui/Backdrop/Backdrop';
+import { Header } from '@/widegt/Header/Header';
+import { Footer } from '@/widegt/Footer/Footer';
+import { Backdrop } from '@/widegt/Backdrop/Backdrop';
 
 import localFont from 'next/font/local';
 import "./globals.scss";
