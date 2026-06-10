@@ -30,7 +30,7 @@ export default function ServicePage() {
       </ContentSectionLayout>
       <ContentSectionLayout
         isBgSecondary={true}
-        eyebrow='FREEE DIAGNOSIS'
+        eyebrow='FREE DIAGNOSIS'
         title='어떤 서비스가 필요한지 함께 정해드려요'
         description='지금 가진 자료만 보내주시면 무엇을 만들 수 있는지, 무엇을 더 준비하면 좋은지 쉽게 정리해드려요.'
       >
@@ -45,9 +45,9 @@ export default function ServicePage() {
       </ContentSectionLayout>
       <ContentSectionLayout
         isBgSecondary={false}
-        eyebrow='FREEE DIAGNOSIS'
+        eyebrow='FAQ'
         title='자주 묻는 질문'
-        description='궁금하신 사항이 있으시면 편하게 문의주세요.'
+        description='그 밖의 궁금하신 점은 연락주시면 친절히 안내해 드리겠습니다.'
       >
         <>
         </>
