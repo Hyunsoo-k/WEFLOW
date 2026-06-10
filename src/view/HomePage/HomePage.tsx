@@ -18,4 +18,4 @@ export const HomePage = () => {
       <HomePricingSection />
     </main>
   )
-}
+}// git force sync
