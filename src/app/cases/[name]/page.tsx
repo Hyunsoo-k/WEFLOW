@@ -1,4 +1,4 @@
-import CasesDetailPage from '@/pages/CasesDetailPage/CasesDetailPage';
+import CasesDetailPage from '@/view/CasesDetailPage/CasesDetailPage';
 
 type Props = {
   params: { name: string }
