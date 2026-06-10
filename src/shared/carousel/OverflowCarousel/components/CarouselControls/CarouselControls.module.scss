@@ -1,0 +1,43 @@
+@use '@/styles/variables' as *;
+
+.carouselControls {
+  display: none; 
+
+  @include tablet {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    transform: translate(-50%, -50%);
+  }
+
+  @include desktop {
+    max-width: calc(#{$max-width} + 5rem);
+  }
+
+  .arrowWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: rgba($color: $bg-base, $alpha: 0.75);
+
+    @include tablet {
+      width: 7rem;
+      height: 7rem;
+    }
+
+    .arrowIcon {
+      font-size: 2rem;
+      color: $text-secondary;
+
+      @include tablet {
+        font-size: 3rem;
+      }
+    }
+  }
+}
