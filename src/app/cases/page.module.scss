@@ -27,4 +27,13 @@
       margin: 0 auto;
     }
   }
+
+  .linkBtnList {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 80%;
+    max-width: 30rem;
+    margin: 0 auto;
+  }
 }
