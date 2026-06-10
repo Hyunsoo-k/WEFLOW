@@ -1,12 +1,12 @@
 import { SERVICE_PROCESS } from '@/data/serviceProcess';
-import { SectionLayout } from '@/components/layout/SectionLayout/SectionLayout';
+import { ContentSectionLayout } from '@/components/layout/sections/ContentSectionLayout/ContentSectionLayout';
 import { ServiceProcessCard } from '@/components/cards/ServiceProcessCard/ServiceProcessCard';
 
 import styles from './HomeProcessSection.module.scss';
 
 export const HomeProcessSection = () => {
   return (
-    <SectionLayout
+    <ContentSectionLayout
       isBgSecondary={false}
       eyebrow='OUR PROCESS'
       title={<><strong>WEFLOW</strong> 만의 제작 프로세스</>}
@@ -19,6 +19,6 @@ export const HomeProcessSection = () => {
           </li>
         ))}
       </ul>
-    </SectionLayout>
+    </ContentSectionLayout>
   );
 };

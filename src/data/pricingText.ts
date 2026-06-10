@@ -1,4 +1,7 @@
-export const PRODUCTION_PLANS = {
+import type { AdPlans, CarePalns, ProductionPlans } from '@/types/pricing';
+
+export const PRODUCTION_PLANS: ProductionPlans = {
+  type: 'produce',
   sectionTitle: '제작 플랜',
   notice: '3중 택1 필수',
   plans: [
@@ -8,7 +11,7 @@ export const PRODUCTION_PLANS = {
       originalPrice: '498,000원',
       price: '249,000원',
       unit: '/ 1회',
-      description: '광고나 이벤트 한 번에 보여주고 싶을 때. 단일 페이지로 3~4일에 완성해드려요.',
+      desc: '광고나 이벤트 한 번에 보여주고 싶을 때. 단일 페이지로 3~4일에 완성해드려요.',
       checklist: [
         { ok: true, item: '3~4일 빠른 제작' },
         { ok: true, item: '문의 구조 설계' },
@@ -22,7 +25,7 @@ export const PRODUCTION_PLANS = {
       originalPrice: '1,998,000원',
       price: '999,000원',
       unit: '/ 1회',
-      description: '우리 브랜드만의 전문적인 집이 필요할 때. 알찬 구성으로 7일 만에 완성해드려요.',
+      desc: '우리 브랜드만의 전문적인 집이 필요할 때. 알찬 구성으로 7일 만에 완성해드려요.',
       checklist: [
         { ok: true, item: '7일 빠른 제작기간' },
         { ok: true, item: '업종 맞춤 구성' },
@@ -37,7 +40,7 @@ export const PRODUCTION_PLANS = {
       originalPrice: '2,198,000원',
       price: '1,099,000원',
       unit: '/ 1회',
-      description: '브랜드 홍보부터 실시간 문의 및 유입까지 한 번에. 10~11일 만에 완벽하게 구축해드려요.',
+      desc: '브랜드 홍보부터 실시간 문의 및 유입까지 한 번에. 10~11일 만에 완벽하게 구축해드려요.',
       popular: true,
       checklist: [
         { ok: true, item: '10~11일 빠른 제작기간' },
@@ -51,7 +54,8 @@ export const PRODUCTION_PLANS = {
   ],
 };
 
-export const CARE_PLANS = {
+export const CARE_PLANS: CarePalns = {
+  type: 'care',
   sectionTitle: 'WEFLOW 케어 플랜',
   sub: '만든 후가 진짜 시작입니다. 지속 성장을 위한 케어 플랜을 선택하세요.',
   notice: '3중 택1 필수',
@@ -62,6 +66,7 @@ export const CARE_PLANS = {
       subtitle: '기본 관리형',
       originalPrice: '월 178,000원',
       price: '월 89,000원',
+      desc: '기본 관리형 — 콘텐츠 갱신·SNS 운영·검색 등록 관리를 매달 가볍게 챙겨드려요.',
       checklist: [
         { ok: true, item: '유지보수 : 월 1회' },
         { ok: true, item: '블로그 : 월 1개' },
@@ -75,6 +80,7 @@ export const CARE_PLANS = {
       subtitle: '성장형',
       originalPrice: '월 378,000원',
       price: '월 189,000원',
+      desc: '성장형 — SNS·블로그를 주 2회 운영하고 광고 세팅 할인 + 문의 개선까지 가장 인기 있는 플랜이에요.',
       popular: true,
       checklist: [
         { ok: true, item: '유지보수 : 월 3회' },
@@ -91,7 +97,8 @@ export const CARE_PLANS = {
       name: 'WEFLOW CARE',
       subtitle: '프리미엄',
       originalPrice: '월 578,000원',
-      price: '월 339,000원',
+      price: '월 289,000원',
+      desc: '프리미엄 — 유지보수 무제한 + SNS 주 3회 + 광고 세팅 무료 + 성과 체크·랜딩 개선까지 풀패키지.',
       isTop: true,
       checklist: [
         { ok: true, item: '유지보수 : 무제한' },
@@ -107,19 +114,20 @@ export const CARE_PLANS = {
   ],
 };
 
-export const AD_PLANS = {
+export const AD_PLANS: AdPlans = {
+  type: 'ad',
   sectionTitle: '광고 플랜',
   plans: [
     {
       name: '네이버 광고',
-      price: '일 149,000원~',
+      price: '월 149,000원~',
       theme: 'green',
       desc: '네이버 검색 상위 노출로 더 많은\n잠재 고객을 유입시킵니다',
       tags: ['검색 광고 운영', '블로그 상위 노출', '키워드 최적화', '월간 성과 보고서'],
     },
     {
       name: '당근 플레이스 광고',
-      price: '일 79,000원~',
+      price: '월 79,000원~',
       theme: 'orange',
       desc: '지역 고객에게 직접 도달하는\n당근마켓 지역 광고를 운영합니다',
       tags: ['지역 타겟 광고', '당근 플레이스 최적화', '동네 비즈니스 홍보', '소상공인 맞춤'],

@@ -18,7 +18,7 @@
   }
 
   @include tablet {
-    padding: 1.8rem
+    padding: 2rem
   }
 
   .header {
@@ -32,12 +32,12 @@
       letter-spacing: 1px;
 
       @include tablet {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
       }
 
       .icon {
-        margin-right: 1rem;
-        font-size: 1.5rem;
+        margin-right: 0.5rem;
+        font-size: 1.8rem;
       }
     }
   }
@@ -59,7 +59,7 @@
       font-size: 2rem;
 
       @include tablet {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
       }
 
       .unit {

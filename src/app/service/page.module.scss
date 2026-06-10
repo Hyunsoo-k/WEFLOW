@@ -60,7 +60,10 @@
 
   .flowList {
     position: relative;
-    
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
     @include desktop {
       max-width: $max-width;
       margin: 0 auto;

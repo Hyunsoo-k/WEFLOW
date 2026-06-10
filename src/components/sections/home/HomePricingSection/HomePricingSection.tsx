@@ -1,15 +1,15 @@
 import { PRODUCTION_PLANS } from '@/data/pricingText';
-import { SectionLayout } from '@/components/layout/SectionLayout/SectionLayout';
+import { ContentSectionLayout } from '@/components/layout/sections/ContentSectionLayout/ContentSectionLayout';
 
 import { PricingCard } from '@/components/cards/PricingCard/PricingCard';
 
 import styles from './HomePricingSection.module.scss';
 
 export const HomePricingSection = () => {
-  const items = PRODUCTION_PLANS.plans;
+  const items = PRODUCTION_PLANS.plans.slice(0, 3);
 
   return (
-    <SectionLayout
+    <ContentSectionLayout
       isBgSecondary={false}
       eyebrow='PRICING'
       title={<><strong>투명한</strong> 가격 안내</>}
@@ -18,10 +18,10 @@ export const HomePricingSection = () => {
       <ul className={styles.cardList}>
         {items.map((item) => (
           <li key={item.name} className={styles.item}>
-            <PricingCard item={item} />
+            <PricingCard planType='produce' item={item} />
           </li>
         ))}
       </ul>
-    </SectionLayout>
+    </ContentSectionLayout>
   );
 };
