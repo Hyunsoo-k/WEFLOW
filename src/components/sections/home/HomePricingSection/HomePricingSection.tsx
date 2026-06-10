@@ -18,7 +18,7 @@ export const HomePricingSection = () => {
       <ul className={styles.cardList}>
         {items.map((item) => (
           <li key={item.name} className={styles.item}>
-            <PricingCard item={item} />
+            <PricingCard planType='produce' item={item} />
           </li>
         ))}
       </ul>
