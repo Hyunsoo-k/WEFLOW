@@ -1,0 +1,80 @@
+@use '@/styles/variables' as *;
+
+.faqListContainer {
+  .faqList {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    @include screen-padding;
+    @include desktop {
+      max-width: calc(#{$max-width} - 15rem);
+      margin: 0 auto;
+    }
+    
+    .faq {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      border: 1px solid $border-base;
+      border-radius: 5rem;
+      cursor: pointer;
+      transition: border-color 0.2s ease;
+      @include tablet {
+        padding: 1.5rem;
+      }
+
+      &.open {
+        border-color: $text-active;
+        border-radius: 1.5rem;
+      }
+
+      .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1rem;
+        font-weight: 600;
+        &:hover {
+          color: $text-active;
+        }
+        @include tablet {
+          font-size: 1.1rem;
+        }
+
+        .arrowIcon {
+          font-size: 1.2rem;
+          cursor: pointer;
+          transition: transform 0.3s ease;
+          flex-shrink: 0;
+        }
+
+        .rotated {
+          transform: rotate(180deg);
+        }
+      }
+
+      .content {
+        overflow: hidden;
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 0.3s ease;
+        &.visible {
+          grid-template-rows: 1fr;
+          padding-top: 1rem;
+        }
+
+        .text {
+          overflow: hidden;
+          padding-top: 0;
+          color: $text-secondary;
+          line-height: 1.4;
+          transition: padding-top 0.3s ease;
+        }
+      }
+
+      &.open .content .text {
+        padding-top: 0.75rem;
+      }
+    }
+  }
+}

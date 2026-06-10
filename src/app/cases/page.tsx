@@ -1,32 +1,34 @@
-import { FLOW_TEXT } from '@/data/flowText';
+import { PORTFOLIOS } from '@/data/portfolioText';
+import { HeaderSectionLayout } from '@/components/layout/sections/HeaderSectionLayout/HeaderSectionLayout';
 import { ContentSectionLayout } from '@/components/layout/sections/ContentSectionLayout/ContentSectionLayout';
-import { FlowCard } from '@/components/cards/FlowCard/FlowCard';
+import { CaseCardBigger } from '@/components/cards/CaseCardBigger/CaseCardBigger';
 import { LinkButton } from '@/components/ui/buttons/LinkButton';
 
 import styles from './page.module.scss';
-import { HeaderSectionLayout } from '@/components/layout/sections/HeaderSectionLayout/HeaderSectionLayout';
 
-export default function ServicePage() {
+export default function CasesPage() {
   return (
     <main className={styles.page}>
       <HeaderSectionLayout
-        eyebrow='SERVICES'
-        title={<>고객분들의 <strong className={styles.strong}>고민을 덜기 위해 </strong><br />묶어서 처리해드립니다.</>}
-        description={<>홈페이지 제작은 시작일 뿐이에요.<br />문의가 들어오고, 결과를 확인하고, 수정·관리까지 한 흐름으로 처리해드립니다.</>}
+        eyebrow='CASES'
+        title={<><strong>WEFLOW</strong>와 함께한 <strong>사례</strong>들을 확인해보세요.</>}
+        description='마음에 드시는 작업물이 있다면 참고하여 만들어 드립니다.'
       />
       <ContentSectionLayout
         isBgSecondary={false}
-        eyebrow='FLOW'
-        title='한줄로 이어지는 작업 흐름'
-        description='작업 흐름을 한눈에 볼수 있어요.'
+        eyebrow='DETAIL'
+        title='홈페이지 제작 사례'
+        description='업종과 서비스 성격에 맞춰 첫 화면, 문의 버튼, 상세 설명 흐름을 다듬은 작업입니다.'
       >
-        <ul className={styles.flowList}>
-          {FLOW_TEXT.map((item) => (
-            <li key={item.step} className={styles.item}>
-              <FlowCard item={item} />
-            </li>
-          ))}
-        </ul>
+        <>
+          <ul className={styles.cardList}>
+            {PORTFOLIOS.map((item) => (
+              <li key={item.title} className={styles.imte}>
+                <CaseCardBigger item={item} />
+              </li>
+            ))}
+          </ul>
+        </>
       </ContentSectionLayout>
       <ContentSectionLayout
         isBgSecondary={true}
@@ -47,11 +49,10 @@ export default function ServicePage() {
         isBgSecondary={false}
         eyebrow='FAQ'
         title='자주 묻는 질문'
-        description='그 밖의 궁금하신 점은 연락주시면 친절히 안내해 드리겠습니다.'
+        description='그 밖에 궁금한 점은 연락주시면 친절히 안내해 드리겠습니다.'
       >
-        <>
-        </>
+        <></>
       </ContentSectionLayout>
     </main>
   );
-}
+};

@@ -8,7 +8,7 @@ import { FiPhoneCall } from "react-icons/fi";
 import { HiArrowTrendingUp } from "react-icons/hi2";
 import { LuCircleCheckBig } from "react-icons/lu";
 
-import { SectionLayout } from '@/components/layout/SectionLayout/SectionLayout';
+import { ContentSectionLayout } from '@/components/layout/sections/ContentSectionLayout/ContentSectionLayout';
 
 import styles from './HomeCarePlanSection.module.scss';
 
@@ -90,7 +90,7 @@ export const HomeCarePlanSection = () => {
   const barWidthPercent = (1 / CARE_PLAN_ITEMS.length) * 100;
 
   return (
-    <SectionLayout
+    <ContentSectionLayout
       isBgSecondary={false}
       eyebrow='CARE PLAN'
       title={<><strong className={styles.strong}>WEFLOW</strong> 만의 케어 플랜 혜택</>}
@@ -132,6 +132,6 @@ export const HomeCarePlanSection = () => {
           </div>
         )}
       </>
-    </SectionLayout>
+    </ContentSectionLayout>
   );
 };
