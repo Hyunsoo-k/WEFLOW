@@ -2,30 +2,11 @@
 
 .page {
   min-height: calc(100dvh - #{$header-height-mobile});
-
   @include tablet {
     min-height: calc(100dvh - #{$header-height-tablet});
   }
-
   @include desktop {
     min-height: calc(100dvh - #{$header-height-desktop});
-  }
-
-  .cardList {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    @include screen-padding;
-    @include tablet {
-      display: grid;
-      grid-template-rows: auto;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-    }
-    @include desktop {
-      max-width: $max-width;
-      margin: 0 auto;
-    }
   }
 
   .linkBtnList {
