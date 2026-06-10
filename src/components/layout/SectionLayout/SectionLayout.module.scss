@@ -1,8 +1,11 @@
 @use '@/styles/variables' as *;
 
-.homePricingSection {
+.sectionLayout {
   padding: 4rem 0;
-  background-color: $bg-base;
+
+  &.bgSecondary {
+    background-color: $bg-secondary;
+  }
 
   @include tablet {
     padding: 6rem 0;
@@ -11,10 +14,6 @@
   .header {
     margin-bottom: 3rem;
     text-align: center;
-
-    @include tablet {
-      margin-bottom: 4rem;
-    }
 
     .eyebrow {
       display: block;
@@ -32,19 +31,14 @@
 
     .title {
       margin-bottom: 1rem;
+      line-height: 1.4;
 
       @include tablet {
         margin-bottom: 1.5rem;
         font-size: 2rem;
       }
 
-      .br {
-        @include tablet {
-          display: none;
-        }
-      }
-
-      .strong {
+      strong {
         color: $text-active;
       }
     }
@@ -54,30 +48,10 @@
       font-size: 0.9rem;
       color: $text-secondary;
       text-align: center;
+      @include screen-padding;
 
       @include tablet {
         font-size: 1rem;
-      }
-    }
-  }
-
-  .body {
-    @include screen-padding;
-    
-    .list {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-
-      @include desktop {
-        flex-direction: row;
-        justify-content: space-between;
-        max-width: $max-width;
-        margin: 0 auto;
-      }
-
-      .item {
-        width: 100%;
       }
     }
   }
