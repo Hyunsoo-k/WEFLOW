@@ -1,0 +1,117 @@
+@use '@/styles/variables' as *;
+
+.flowCard {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1.5rem;
+  border: 1px solid $border-base;
+  border-radius: $radius;
+  background-color: $bg-base;
+  box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.1);
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @include tablet {
+      width: 47%;
+    }
+
+    .step {
+      font-size: 2rem;
+      font-weight: 600;
+      color: $text-active;
+    }
+
+    .title {
+      font-size: 1.3rem;
+
+      @include tablet {
+        font-size: 2rem;
+      }
+    }
+
+    .description {
+      color: $text-secondary;
+      line-height: 1.4;
+    }
+
+    .infoBox {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        width: 100%;
+        padding: 0.8rem;
+        border: 1px solid $border-base;
+        border-radius: $radius;
+        background-color: $bg-secondary;
+        font-size: 0.9rem;
+        font-weight: 500;
+        line-height: 1.4;
+
+        @include tablet {
+          width: 48%;
+        }
+      }
+    }
+  }
+
+  .body {
+    @include tablet {
+      width: 47%;
+    }
+    
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      .checkItem {
+        display: flex;
+        gap: 1rem;
+        padding: 0.8rem;
+        border: 1px solid $border-base;
+        border-radius: $radius;
+        background-color: $bg-secondary;
+
+        @include tablet {
+          padding: 1rem;
+        }
+
+        .checkIcon {
+          flex-shrink: 0;
+          font-size: 1.2rem;
+          color: $text-active;
+        }
+
+        .text {
+          font-size: 0.9rem;
+          font-weight: 500;
+          line-height: 1.4;
+
+          @include tablet {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

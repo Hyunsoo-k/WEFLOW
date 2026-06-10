@@ -1,0 +1,36 @@
+@use '@/styles/variables' as *;
+
+.linkButton {
+  display: block;
+  padding: 0.8rem 1.2rem;
+  border: 1px solid $border-base;
+  border-radius: 9999px;
+  background-color: $bg-base;
+  font-size: 0.9rem;
+  color: $text-base;
+  text-align: center;
+  transition: background-color 0.2s ease;
+
+  @include tablet {
+    font-size: 1rem;
+  }
+
+  &:hover {
+    border: 1px solid $bg-active;
+    color: $text-active;
+  }
+
+  &.active {
+    border: none;
+    background-color: $bg-active;
+    color: $text-inverse;
+
+    &:hover {
+      background-color: $bg-active-secondary;
+    }
+  }
+
+  &.fullWidth {
+    width: 100%;
+  }
+}
