@@ -6,7 +6,7 @@ import { PricingCard } from '@/components/cards/PricingCard/PricingCard';
 import styles from './HomePricingSection.module.scss';
 
 export const HomePricingSection = () => {
-  const items = PRODUCTION_PLANS.plans;
+  const items = PRODUCTION_PLANS.plans.slice(0, 3);
 
   return (
     <ContentSectionLayout
