@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { IoIosArrowDown } from 'react-icons/io';
 
-import { FAQ_TEXT } from '../data/faqText';
+import { FAQ_TEXT } from '@/data/faqText';
 
 import styles from './FaqListContainer.module.scss';
 
