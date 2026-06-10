@@ -4,22 +4,16 @@ import { FlowCard } from '@/components/cards/FlowCard/FlowCard';
 import { LinkButton } from '@/components/ui/buttons/LinkButton';
 
 import styles from './page.module.scss';
+import { HeaderSectionLayout } from '@/components/layout/sections/HeaderSectionLayout/HeaderSectionLayout';
 
 export default function ServicePage() {
   return (
     <main className={styles.page}>
-      <section className={styles.heroSection}>
-        <span className={styles.eyebrow}>SERVICES</span>
-        <h2 className={styles.title}>
-          고객분들의 <br className={styles.onlyMobileBr} />
-          <strong className={styles.strong}>고민을 덜기 위해</strong><br />
-          묶어서 처리해드립니다.
-        </h2>
-        <span className={styles.description}>
-          홈페이지 제작은 시작일 뿐이에요.<br />
-          문의가 들어오고, 결과를 확인하고, 수정·관리까지 한 흐름으로 처리해드립니다.
-        </span>
-      </section>
+      <HeaderSectionLayout
+        eyebrow='SERVICES'
+        title={<>고객분들의 <strong className={styles.strong}>고민을 덜기 위해 </strong><br />묶어서 처리해드립니다.</>}
+        description={<>홈페이지 제작은 시작일 뿐이에요.<br />문의가 들어오고, 결과를 확인하고, 수정·관리까지 한 흐름으로 처리해드립니다.</>}
+      />
       <ContentSectionLayout
         isBgSecondary={false}
         eyebrow='FLOW'
