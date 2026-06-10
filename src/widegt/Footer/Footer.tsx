@@ -28,7 +28,12 @@ export const Footer = () => {
           <ul className={styles.iconList}>
             {ICONS.map((item) => (
               <li key={item.url} className={styles.item}>
-                <Link href={item.url} className={styles.iconLink}>
+                <Link
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.iconLink}
+                >
                   <item.icon color={item.color} className={styles.icon} />
                 </Link>
               </li>

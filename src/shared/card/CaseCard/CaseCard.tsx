@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Image from 'next/image';
 import { IoArrowForward } from "react-icons/io5";
 
@@ -11,7 +12,7 @@ type Props = {
 
 export const CaseCard = ({ item }: Props) => {
   return (
-    <div className={styles.caseCard}>
+    <Link href='/cases' className={styles.caseCard}>
       <div className={styles.thumbnailWrapper}>
         <Image src={item.img} alt={item.title} fill className={styles.thumbnail} />
       </div>
@@ -27,6 +28,6 @@ export const CaseCard = ({ item }: Props) => {
         <span className={styles.category}>{item.category}</span>
         <IoArrowForward className={styles.icon} />
       </footer>
-    </div>
+    </Link>
   );
 };
