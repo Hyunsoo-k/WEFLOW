@@ -1,33 +1,25 @@
 export type PlanType = 'produce' | 'care' | 'ad';
 
-export type ProductionPlanItem = {
-  tier: string;
+export interface PricingItem {
   name: string;
-  originalPrice: string;
   price: string;
-  unit: string;
   desc: string;
+  tier?: string;
+  originalPrice?: string;
+  unit?: string;
+  subtitle?: string;
   popular?: boolean;
-  checklist: { ok: boolean, item: string }[];
-}
+  isTop?: boolean;
+  theme?: string;
+  checklist?: { ok: boolean; item: string }[];
+  tags?: string[];
+};
 
 export type ProductionPlans = {
   type: PlanType;
   sectionTitle: string;
   notice: string;
-  plans: ProductionPlanItem[];
-};
-
-export type CarePlanItem = {
-  tier: string;
-  name: string;
-  subtitle: string;
-  originalPrice: string;
-  price: string;
-  desc: string;
-  popular?: boolean;
-  isTop?: boolean;
-  checklist: { ok: boolean, item: string }[]
+  plans: PricingItem[];
 };
 
 export type CarePalns = {
@@ -35,19 +27,11 @@ export type CarePalns = {
   sectionTitle: string;
   sub: string;
   notice: string;
-  plans: CarePlanItem[];
+  plans: PricingItem[];
 };
-
-export type AdPlanItem = {
-  name: string;
-  price: string;
-  theme: string;
-  desc: string;
-  tags: string[];
-}
 
 export type AdPlans = {
   type: PlanType;
   sectionTitle: string;
-  plans: AdPlanItem[];
+  plans: PricingItem[];
 };

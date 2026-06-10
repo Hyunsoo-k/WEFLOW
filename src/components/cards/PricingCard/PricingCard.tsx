@@ -3,14 +3,14 @@ import { FaStar } from "react-icons/fa";
 import { GiQueenCrown } from "react-icons/gi";
 import { FaCheck } from "react-icons/fa6";
 
-import type { ProductionPlanItem, CarePlanItem, AdPlanItem, PlanType } from '@/types/pricing';
+import type { PricingItem, PlanType } from '@/types/pricing';
 import { LinkButton } from '@/components/ui/buttons/LinkButton';
 
 import styles from './PricingCard.module.scss';
 
 type Props = {
   planType: PlanType;
-  item: ProductionPlanItem | CarePlanItem | AdPlanItem;
+  item: PricingItem;
 };
 
 export const PricingCard = ({ planType, item }: Props) => {
@@ -42,24 +42,26 @@ export const PricingCard = ({ planType, item }: Props) => {
         </h3>
       </header>
       <div className={styles.body}>
-        <span className={styles.originalPrice}>{item.originalPrice}</span>
+        {item.originalPrice && (
+          <span className={styles.originalPrice}>{item.originalPrice}</span>
+        )}
         <strong className={styles.price}>
           {item.price}
           <span className={styles.unit}>{item.unit}</span>
         </strong>
         <span className={styles.description}>{item.desc}</span>
         <ul className={styles.list}>
-          {item.checklist?.map((item) => (
-            <li key={item.item} className={styles.item}>
+          {item.checklist?.map((check) => (
+            <li key={check.item} className={styles.item}>
               <span className={styles.text}>
-                <FaCheck className={styles.icon} />{item.item}
+                <FaCheck className={styles.icon} />{check.item}
               </span>
             </li>
           ))}
-          {item.tags?.map((item) => (
-            <li key={item.item} className={styles.item}>
+          {item.tags?.map((tag, index) => (
+            <li key={`${tag}-${index}`} className={styles.item}>
               <span className={styles.text}>
-                <FaCheck className={styles.icon} />{item}
+                <FaCheck className={styles.icon} />{tag}
               </span>
             </li>
           ))}
@@ -67,7 +69,7 @@ export const PricingCard = ({ planType, item }: Props) => {
       </div>
       <footer className={styles.footer}>
         <LinkButton
-          isActive={item.tier === 'PRO' ? true : false}
+          isActive={item.tier === 'PRO'}
           text='견적 보기'
           url='/'
           isFullWidth={true}
