@@ -1,9 +1,9 @@
 import { FLOW_TEXT } from '@/data/flowText';
+import { ContentSectionLayout } from '@/components/layout/sections/ContentSectionLayout/ContentSectionLayout';
 import { FlowCard } from '@/components/cards/FlowCard/FlowCard';
+import { LinkButton } from '@/components/ui/buttons/LinkButton';
 
 import styles from './page.module.scss';
-import { LinkButton } from '@/components/ui/buttons/LinkButton';
-import { SectionLayout } from '@/components/layout/SectionLayout/SectionLayout';
 
 export default function ServicePage() {
   return (
@@ -20,7 +20,7 @@ export default function ServicePage() {
           문의가 들어오고, 결과를 확인하고, 수정·관리까지 한 흐름으로 처리해드립니다.
         </span>
       </section>
-      <SectionLayout
+      <ContentSectionLayout
         isBgSecondary={false}
         eyebrow='FLOW'
         title='한줄로 이어지는 작업 흐름'
@@ -33,8 +33,8 @@ export default function ServicePage() {
             </li>
           ))}
         </ul>
-      </SectionLayout>
-      <SectionLayout
+      </ContentSectionLayout>
+      <ContentSectionLayout
         isBgSecondary={true}
         eyebrow='FREEE DIAGNOSIS'
         title='어떤 서비스가 필요한지 함께 정해드려요'
@@ -48,8 +48,8 @@ export default function ServicePage() {
             <LinkButton isActive={false} text='가격 자세히 보기' url='' />
           </li>
         </ul>
-      </SectionLayout>
-      <SectionLayout
+      </ContentSectionLayout>
+      <ContentSectionLayout
         isBgSecondary={false}
         eyebrow='FREEE DIAGNOSIS'
         title='자주 묻는 질문'
@@ -57,7 +57,7 @@ export default function ServicePage() {
       >
         <>
         </>
-      </SectionLayout>
+      </ContentSectionLayout>
     </main>
   );
 }

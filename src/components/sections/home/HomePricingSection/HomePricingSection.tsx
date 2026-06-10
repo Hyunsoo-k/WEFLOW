@@ -1,5 +1,5 @@
 import { PRODUCTION_PLANS } from '@/data/pricingText';
-import { SectionLayout } from '@/components/layout/SectionLayout/SectionLayout';
+import { ContentSectionLayout } from '@/components/layout/sections/ContentSectionLayout/ContentSectionLayout';
 
 import { PricingCard } from '@/components/cards/PricingCard/PricingCard';
 
@@ -9,7 +9,7 @@ export const HomePricingSection = () => {
   const items = PRODUCTION_PLANS.plans;
 
   return (
-    <SectionLayout
+    <ContentSectionLayout
       isBgSecondary={false}
       eyebrow='PRICING'
       title={<><strong>투명한</strong> 가격 안내</>}
@@ -22,6 +22,6 @@ export const HomePricingSection = () => {
           </li>
         ))}
       </ul>
-    </SectionLayout>
+    </ContentSectionLayout>
   );
 };

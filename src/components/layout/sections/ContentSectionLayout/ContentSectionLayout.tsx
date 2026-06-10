@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 
-import styles from './SectionLayout.module.scss';
+import styles from './ContentSectionLayout.module.scss';
 
 type Props = {
   isBgSecondary: boolean;
@@ -10,9 +10,9 @@ type Props = {
   children: ReactNode;
 };
 
-export const SectionLayout = ({ isBgSecondary, eyebrow, title, description, children }: Props) => {
+export const ContentSectionLayout = ({ isBgSecondary, eyebrow, title, description, children }: Props) => {
   return (
-    <section className={`${styles.sectionLayout} ${isBgSecondary ? styles.bgSecondary : ''}`}>
+    <section className={`${styles.contentSectionLayout} ${isBgSecondary ? styles.bgSecondary : ''}`}>
       <header className={styles.header}>
         <span className={styles.eyebrow}>{eyebrow}</span>
         <h3 className={styles.title}>{title}</h3>
