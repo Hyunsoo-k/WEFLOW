@@ -1,0 +1,101 @@
+@use '@/styles/variables' as *;
+
+.reviewCard {
+  display: flex;
+  flex-direction: column;
+  width: 16rem;
+  height: 16rem;
+  padding: 1rem;
+  border: 1px solid $border-base;
+  border-radius: $radius;
+  background-color: $bg-base;
+
+  @include tablet {
+    width: 20rem;
+    height: 20rem;
+    padding: 1.5rem;
+  }
+  
+  .rating {
+    display: flex;
+    gap: 0.3rem;
+    margin-bottom: 1.5rem;
+
+    .starIcon {
+      font-size: 1.5rem;
+      color: $text-active;
+    }
+  }
+
+  .info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    .body {
+      .content {
+        font-weight: 500;
+        line-height: 1.6;
+      }
+    }
+
+    .footer {
+      display: grid;
+      grid-template: auto auto / auto 1fr auto;
+      row-gap: 0.5rem;
+      column-gap: 0.8rem;
+      margin-top: auto;
+      padding-top: 1rem;
+      border-top: 1px solid $border-base;
+
+      @include tablet {
+        padding-top: 1.5rem;
+      }
+
+      .profile {
+        grid-area: 1 / 1 / 3 / 2;
+        display: flex;
+        place-self: center start;
+        justify-content: center;
+        align-items: center;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        background-color: rgba($color: $bg-active, $alpha: 0.1);
+        font-weight: 600;
+        color: $text-active;
+
+        @include tablet {
+          width: 3rem;
+          height: 3rem;
+        }
+      }
+
+      .author {
+        font-size: 0.9rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+
+        @include tablet {
+          font-size: 1rem;
+        }
+      }
+
+      .bizName {
+        font-size: 0.9rem;
+        color: $text-secondary;
+
+        @include tablet {
+          font-size: 1rem;
+        }
+      }
+
+      .arrowIcon {
+        grid-area: 1 / 3 / 3 / 4;
+        place-self: center end;
+        font-size: 1.2rem;
+        color: $text-active;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@use '@/styles/variables' as *;
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 0.5rem;
+  min-height: max-content;
+  @include screen-padding;
+  
+  @include tablet {
+    gap: 1rem;
+  }
+
+  .item {
+    flex-shrink: 0;
+  }
+}

@@ -1,0 +1,29 @@
+@use '@/styles/variables' as *;
+
+.nav {
+  display: none;
+
+  @include tablet {
+    display: block;
+    margin-left: auto;
+
+    .list {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+
+      @include desktop {
+        gap: 4rem;
+      }
+
+      .item {
+        font-size: 1.1rem;
+        font-weight: 600;
+
+        &:hover {
+          color: $text-active;
+        }
+      }
+    }
+  }
+}

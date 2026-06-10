@@ -1,0 +1,109 @@
+@use '@/styles/variables' as *;
+
+.pricingCard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.5rem;
+  border: 1px solid $border-base;
+  border-radius: $radius;
+  box-shadow: 5px 5px 20px -8px rgba(0, 0, 0, 0.1);
+
+  &.active {
+    border: 1px solid $bg-active;
+
+    .price {
+      color: $text-active;
+    }
+  }
+
+  @include tablet {
+    padding: 2rem;
+  }
+
+  .header {
+    margin-bottom: 2.5rem;
+
+    .title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+
+      @include tablet {
+        font-size: 1.8rem;
+      }
+
+      .icon {
+        margin-right: 0.5rem;
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    .originalPrice {
+      margin-bottom: 0.5rem;
+      color: $text-secondary;
+      text-decoration: line-through;
+    }
+    
+    .price {
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+
+      @include tablet {
+        font-size: 2.8rem;
+      }
+
+      .unit {
+        margin-left: 0.5rem;
+        font-size: 1rem;
+        font-weight: 500;
+        color: $text-secondary;
+      }
+    }
+
+    .description {
+      margin-bottom: 3rem;
+      font-size: 0.9rem;
+      color: $text-secondary;
+      line-height: 1.6;
+    }
+    
+    .list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      width: 100%;
+
+      @include desktop {
+        align-items: start;
+      }
+      
+      .item {
+        .text {
+          display: flex;
+          align-items: center;
+          
+          .icon {
+            margin-right: 1rem;
+            color: $text-active;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    margin-top: auto;
+    padding-top: 1.8rem;
+  }
+}

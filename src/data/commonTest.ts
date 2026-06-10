@@ -1,4 +1,4 @@
-import type { ReviewItem } from '@/types/reviewItem';
+import type { ReviewItem } from '@/type/reviewItem';
 
 export const REVIEWS = [
   { text: '"문의 버튼 위치 바꾸고 상담 문의가 확실히 늘었어요."', stars: 5, author: '김*', bizName: '달빛결 피부관리샵', tag: '운동·뷰티' },

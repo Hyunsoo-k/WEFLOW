@@ -1,0 +1,69 @@
+@use '@/styles/variables' as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  z-index: $header-zidnex;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: $header-height-mobile;
+  border-bottom: 1px solid $border-base;
+  background-color: rgba($color: $bg-base, $alpha: 0.9);
+  @include screen-padding;
+
+  @include tablet {
+    height: $header-height-tablet;
+  }
+
+  .inner {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: calc(#{$max-width} + 4rem);
+    margin: 0 auto;
+
+    @include tablet {
+      gap: 2rem;
+    }
+
+    @include desktop {
+      gap: 4rem;
+    }
+
+    .banner {
+      .bannerLink {
+        display: flex;
+        align-items: center;
+
+        .bannerText {
+          font-size: 1.2rem;
+          font-weight: 600;
+
+          @include tablet {
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+
+    .burgerIcon {
+      display: block;
+      margin-left: auto;
+      font-size: 1.6rem;
+      color: $text-base;
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+    .linkBtnWrapper {
+      display: none;
+
+      @include tablet {
+        display: block;
+      }
+    }
+  }
+}
