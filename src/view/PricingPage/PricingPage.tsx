@@ -21,7 +21,7 @@ export const PricingPage = () => {
       <BodySection
         isBgSecondary={false}
         eyebrow='PRCING'
-        title={<>WEDLOW만의 <strong>합리적인</strong> 가격</>}
+        title={<>WEFLOW만의 <strong>합리적인</strong> 가격</>}
         description='비즈니스 목적에 맞는 플랜을 선택해 보세요.'
       >
         <div className={styles.listBox}>
