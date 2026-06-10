@@ -9,7 +9,7 @@
   width: 100dvw;
   height: $header-height-mobile;
   border-bottom: 1px solid $border-base;
-  background-color: $bg-base;
+  background-color: rgba($color: $bg-base, $alpha: 0.9);
   @include screen-padding;
 
   @include tablet {
@@ -18,9 +18,18 @@
 
   .inner {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     width: 100%;
+    max-width: calc(#{$max-width} + 4rem);
+    margin: 0 auto;
+
+    @include tablet {
+      gap: 2rem;
+    }
+
+    @include desktop {
+      gap: 4rem;
+    }
 
     .banner {
 
@@ -40,11 +49,21 @@
     }
 
     .burgerIcon {
+      display: block;
+      margin-left: auto;
       font-size: 1.6rem;
       color: $text-base;
 
       @include tablet {
         display: none;
+      }
+    }
+
+    .linkBtnWrapper {
+      display: none;
+
+      @include tablet {
+        display: block;
       }
     }
   }

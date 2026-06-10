@@ -1,0 +1,19 @@
+@use '@/styles/variables' as *;
+
+.cardList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  @include screen-padding;
+
+  @include desktop {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: $max-width;
+    margin: 0 auto;
+  }
+
+  .item {
+    width: 100%;
+  }
+}

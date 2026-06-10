@@ -8,6 +8,8 @@ import { FiPhoneCall } from "react-icons/fi";
 import { HiArrowTrendingUp } from "react-icons/hi2";
 import { LuCircleCheckBig } from "react-icons/lu";
 
+import { SectionLayout } from '@/components/layout/SectionLayout/SectionLayout';
+
 import styles from './HomeCarePlanSection.module.scss';
 
 const CARE_PLAN_ITEMS = [
@@ -20,7 +22,7 @@ const CARE_PLAN_ITEMS = [
 ];
 
 export const HomeCarePlanSection = () => {
-  const listRef = useRef<HTMLUListElement>(null);
+  const trackRef = useRef<HTMLUListElement>(null);
   const [scrollPercent, setScrollPercent] = useState<number>(0);
   const [isScrollable, setIsScrollable] = useState<boolean>(false);
   const [isDown, setIsDown] = useState<boolean>(false);
@@ -28,8 +30,8 @@ export const HomeCarePlanSection = () => {
   const [scrollLeft, setScrollLeft] = useState<number>(0);
 
   const checkScrollable = () => {
-    if (listRef.current) {
-      const { scrollWidth, clientWidth } = listRef.current;
+    if (trackRef.current) {
+      const { scrollWidth, clientWidth } = trackRef.current;
       setIsScrollable(scrollWidth > clientWidth);
     }
   };
@@ -80,28 +82,24 @@ export const HomeCarePlanSection = () => {
     const x = e.pageX - e.currentTarget.offsetLeft;
     const walk = (x - startX) * 1.5; 
     
-    if (listRef.current) {
-      listRef.current.scrollLeft = scrollLeft - walk;
+    if (trackRef.current) {
+      trackRef.current.scrollLeft = scrollLeft - walk;
     }
   };
 
   const barWidthPercent = (1 / CARE_PLAN_ITEMS.length) * 100;
 
   return (
-    <section className={styles.homeCarePlanSection}>
-      <header className={styles.header}>
-        <span className={styles.eyebrow}>CARE PLAN</span>
-        <h2 className={styles.title}>
-          <strong className={styles.strong}>WEFLOW</strong> 만의 케어 플랜 혜택
-        </h2>
-        <span className={styles.description}>
-          고객만을 위한 차별화된 케어를 확인해 보세요.
-        </span>
-      </header>
-      <div className={styles.body}>
+    <SectionLayout
+      isBgSecondary={false}
+      eyebrow='CARE PLAN'
+      title={<><strong className={styles.strong}>WEFLOW</strong> 만의 케어 플랜 혜택</>}
+      description='고객만을 위한 차별화된 케어를 확인해 보세요.'
+    >
+      <>
         <ul 
-          ref={listRef} 
-          className={`${styles.list} ${!isScrollable ? styles.center : ''} ${isDown ? styles.active : ''}`} 
+          ref={trackRef} 
+          className={`${styles.track} ${!isScrollable ? styles.center : ''} ${isDown ? styles.active : ''}`} 
           onScroll={handleScroll}
           onMouseDown={handleMouseDown}
           onMouseUp={handleMouseUp}
@@ -109,12 +107,12 @@ export const HomeCarePlanSection = () => {
           onMouseMove={handleMouseMove}
         >
           {CARE_PLAN_ITEMS.map((item, index) => (
-            <li key={item.title} className={styles.item}>
+            <li key={item.title} className={styles.trackItem}>
               <div className={styles.carePlan}>
                 <div className={styles.iconWrapper}>
                   {item.icon({ className: styles.icon })}
                 </div>
-                <div className={styles.textArea}>
+                <div className={styles.info}>
                   <p className={styles.title}>{index + 1}. {item.title}</p>
                   <span className={styles.content}>{item.content}</span>
                 </div>
@@ -133,7 +131,7 @@ export const HomeCarePlanSection = () => {
             />
           </div>
         )}
-      </div>
-    </section>
+      </>
+    </SectionLayout>
   );
 };
