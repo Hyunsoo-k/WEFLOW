@@ -13,7 +13,6 @@ WEFLOW사의 면접 과제물
 - typescript
 - nextJs(app 라우터)
 - scss
-- tiptap
 - zustand
 - react-icons
 
