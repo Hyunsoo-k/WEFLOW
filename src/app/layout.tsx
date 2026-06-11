@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 
+import { RouteChangeHandler } from '@/app/_components/RouteChangeHandler/RouterChangeHandler';
 import { Header } from '@/widegt/Header/Header';
 import { Footer } from '@/widegt/Footer/Footer';
 import { Backdrop } from '@/widegt/Backdrop/Backdrop';
@@ -26,6 +28,9 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className={pretendard.variable}>
+        <Suspense fallback={null}>
+          <RouteChangeHandler />
+        </Suspense>
         <Header />
         {children}
         <Footer />
