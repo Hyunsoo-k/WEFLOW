@@ -13,7 +13,7 @@ export const Drawer = () => {
   const { isOpen, close } = useDrawerStore();
 
   return (
-    <nav className={`${styles.drawer} ${isOpen ? styles.open : styles.close}`}>
+    <nav onClick={close} className={`${styles.drawer} ${isOpen ? styles.open : styles.close}`}>
       <header className={styles.header}>
         <h2 className={styles.brand}>WEFLOW</h2>
         <RxCross2 className={styles.icon} onClick={close} />
@@ -29,7 +29,7 @@ export const Drawer = () => {
             </li>
           ))}
           <li className={styles.item}>
-            <LinkButton isActive={true} text='무료 문의' url='/contact' />
+            <LinkButton isActive={true} text='무료 문의' url='/contact' onClick={close} />
           </li>
         </ul>
       </div>
